@@ -1,0 +1,21 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: bimservice
+spec:
+  selector:
+    matchLabels:
+      app: bimservice
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bimservice
+    spec:
+      containers:
+      - name: bim-service 
+        image: quay.io/procoredevops/bim-service:695f21c1932a0d2d1b96240bd18b4b4cf2231065
+        ports:
+        - containerPort: 4004 
+      imagePullSecrets:
+         name: my-pull-secret #make sure this name matches with the "name" in your mysecret.yaml file
