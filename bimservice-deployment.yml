@@ -18,4 +18,4 @@ spec:
         ports:
         - containerPort: 4004 
       imagePullSecrets:
-         name: my-pull-secret #make sure this name matches with the "name" in your mysecret.yaml file
+        - name: my-pull-secret #make sure this name matches with the "name" in your mysecret.yaml file
