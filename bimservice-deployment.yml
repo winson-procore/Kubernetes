@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: bim-service 
-        image: quay.io/procoredevops/bim-service:695f21c1932a0d2d1b96240bd18b4b4cf2231065
+        image: quay.io/procoredevops/bim-property-service:d154a529e360f64179b7eb64e0c0fb95ef8f65c9
         ports:
         - containerPort: 4004 
       imagePullSecrets:
